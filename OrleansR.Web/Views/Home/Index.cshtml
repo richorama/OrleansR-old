@@ -1,0 +1,29 @@
+﻿<input type="text" id="text" /><button id="send">Send</button>
+<div id="results"></div>
+<script>
+
+    $(function () {
+        chat = $.connection.testHub;
+
+        chat.client.broadcastMessage = function (message) {
+            $("#results").append("<p>" + message + "</p>");
+        };
+        
+        $.connection.hub.start().done(function () {
+            console.log("ready");
+            $("#send").click(function () {
+                var value = $("#text").val();
+                chat.server.send(value);
+                $("#text").val("");
+            });
+
+            /*
+            var index = 0;
+            setInterval(function () {
+                chat.server.send("hello " + (index++).toString());
+            }, 1000);*/
+        });
+
+    });
+
+</script>
