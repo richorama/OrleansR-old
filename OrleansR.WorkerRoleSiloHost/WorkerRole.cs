@@ -1,11 +1,11 @@
 using Microsoft.WindowsAzure.ServiceRuntime;
-using Orleans.Host.Azure;
+using Orleans.Host;
 
 namespace OrleansR.WorkerRoleSiloHost
 {
     public class WorkerRole : RoleEntryPoint
     {
-        Orleans.Host.Azure.OrleansAzureSilo silo;
+        OrleansAzureSilo silo;
 
         public override bool OnStart()
         {

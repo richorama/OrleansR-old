@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.SignalR.Messaging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Orleans.Host.SiloHost;
+using Orleans.Host;
 using OrleansR.GrainInterfaces;
 using OrleansR.MessageBus;
 using System;

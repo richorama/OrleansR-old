@@ -3,11 +3,12 @@ using OrleansR.GrainInterfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Orleans.Concurrency;
 
 namespace OrleansR.Grains
 {
     [Reentrant]
-    public class PubSubManagerGrain : GrainBase, IPubSubManager
+    public class PubSubManagerGrain : Grain, IPubSubManager
     {
         List<IPubSubGrain> subscribers;
 

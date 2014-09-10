@@ -1,5 +1,5 @@
 ﻿using Microsoft.WindowsAzure.ServiceRuntime;
-using Orleans.Host.Azure.Client;
+using Orleans.Host;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;

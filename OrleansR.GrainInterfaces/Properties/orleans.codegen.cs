@@ -23,130 +23,153 @@ namespace OrleansR.GrainInterfaces
     using System.IO;
     using System.Collections.Generic;
     using Orleans;
+    using Orleans.Runtime;
     using System.Collections;
-    using Microsoft.AspNet.SignalR.Messaging;
     
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.814.60418")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.970.29197")]
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
     public class PubSubGrainFactory
     {
         
 
-                        public static IPubSubGrain GetGrain(long primaryKey)
+                        public static OrleansR.GrainInterfaces.IPubSubGrain GetGrain(long primaryKey)
                         {
-                            return Cast(GrainFactoryBase.MakeGrainReferenceInternal(typeof(IPubSubGrain), 403532564, primaryKey));
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(OrleansR.GrainInterfaces.IPubSubGrain), 403532564, primaryKey));
                         }
 
-                        public static IPubSubGrain GetGrain(long primaryKey, string grainClassNamePrefix)
+                        public static OrleansR.GrainInterfaces.IPubSubGrain GetGrain(long primaryKey, string grainClassNamePrefix)
                         {
-                            return Cast(GrainFactoryBase.MakeGrainReferenceInternal(typeof(IPubSubGrain), 403532564, primaryKey, grainClassNamePrefix));
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(OrleansR.GrainInterfaces.IPubSubGrain), 403532564, primaryKey, grainClassNamePrefix));
                         }
 
-                        public static IPubSubGrain GetGrain(Guid primaryKey)
+                        public static OrleansR.GrainInterfaces.IPubSubGrain GetGrain(System.Guid primaryKey)
                         {
-                            return Cast(GrainFactoryBase.MakeGrainReferenceInternal(typeof(IPubSubGrain), 403532564, primaryKey));
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(OrleansR.GrainInterfaces.IPubSubGrain), 403532564, primaryKey));
                         }
 
-                        public static IPubSubGrain GetGrain(Guid primaryKey, string grainClassNamePrefix)
+                        public static OrleansR.GrainInterfaces.IPubSubGrain GetGrain(System.Guid primaryKey, string grainClassNamePrefix)
                         {
-                            return Cast(GrainFactoryBase.MakeGrainReferenceInternal(typeof(IPubSubGrain), 403532564, primaryKey, grainClassNamePrefix));
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(OrleansR.GrainInterfaces.IPubSubGrain), 403532564, primaryKey, grainClassNamePrefix));
                         }
 
-            public static IPubSubGrain Cast(IAddressable grainRef)
+            public static OrleansR.GrainInterfaces.IPubSubGrain Cast(global::Orleans.Runtime.IAddressable grainRef)
             {
                 
                 return PubSubGrainReference.Cast(grainRef);
             }
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.814.60418")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.970.29197")]
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
         [System.SerializableAttribute()]
-        [Orleans.GrainReferenceAttribute("OrleansR.GrainInterfaces.IPubSubGrain")]
-        internal class PubSubGrainReference : Orleans.GrainReference, IPubSubGrain, Orleans.IAddressable
+        [global::Orleans.CodeGeneration.GrainReferenceAttribute("OrleansR.GrainInterfaces.OrleansR.GrainInterfaces.IPubSubGrain")]
+        internal class PubSubGrainReference : global::Orleans.Runtime.GrainReference, global::Orleans.Runtime.IAddressable, OrleansR.GrainInterfaces.IPubSubGrain
         {
             
 
-            public static IPubSubGrain Cast(IAddressable grainRef)
+            public static OrleansR.GrainInterfaces.IPubSubGrain Cast(global::Orleans.Runtime.IAddressable grainRef)
             {
                 
-                return (IPubSubGrain) GrainReference.CastInternal(typeof(IPubSubGrain), (GrainReference gr) => { return new PubSubGrainReference(gr);}, grainRef, 403532564);
+                return (OrleansR.GrainInterfaces.IPubSubGrain) global::Orleans.Runtime.GrainReference.CastInternal(typeof(OrleansR.GrainInterfaces.IPubSubGrain), (global::Orleans.Runtime.GrainReference gr) => { return new PubSubGrainReference(gr);}, grainRef, 403532564);
             }
-
-                protected override int InterfaceId { get { return 403532564; } }
-
-                public override bool IsCompatible(int interfaceId) { return interfaceId == this.InterfaceId; }
-
-                protected override string InterfaceName { get { return "OrleansR.GrainInterfaces.IPubSubGrain"; } }
-
-                protected override string GetMethodName(int interfaceId, int methodId) { return PubSubGrainMethodInvoker.GetMethodName(interfaceId, methodId); }
             
-            protected internal PubSubGrainReference(GrainReference reference) : 
+            protected internal PubSubGrainReference(global::Orleans.Runtime.GrainReference reference) : 
                     base(reference)
             {
             }
             
-            [Orleans.CopierMethodAttribute()]
+            protected internal PubSubGrainReference(SerializationInfo info, StreamingContext context) : 
+                    base(info, context)
+            {
+            }
+            
+            protected override int InterfaceId
+            {
+                get
+                {
+                    return 403532564;
+                }
+            }
+            
+            protected override string InterfaceName
+            {
+                get
+                {
+                    return "OrleansR.GrainInterfaces.OrleansR.GrainInterfaces.IPubSubGrain";
+                }
+            }
+            
+            [global::Orleans.CodeGeneration.CopierMethodAttribute()]
             public static object _Copier(object original)
             {
                 PubSubGrainReference input = ((PubSubGrainReference)(original));
-                return ((PubSubGrainReference)(GrainReference.CopyGrainReference(input)));
+                return ((PubSubGrainReference)(global::Orleans.Runtime.GrainReference.CopyGrainReference(input)));
             }
             
-            [Orleans.SerializerMethodAttribute()]
-            public static void _Serializer(object original, Orleans.Serialization.BinaryTokenStreamWriter stream, System.Type expected)
+            [global::Orleans.CodeGeneration.SerializerMethodAttribute()]
+            public static void _Serializer(object original, global::Orleans.Serialization.BinaryTokenStreamWriter stream, System.Type expected)
             {
                 PubSubGrainReference input = ((PubSubGrainReference)(original));
-                GrainReference.SerializeGrainReference(input, stream, expected);
+                global::Orleans.Runtime.GrainReference.SerializeGrainReference(input, stream, expected);
             }
             
-            [Orleans.DeserializerMethodAttribute()]
-            public static object _Deserializer(System.Type expected, Orleans.Serialization.BinaryTokenStreamReader stream)
+            [global::Orleans.CodeGeneration.DeserializerMethodAttribute()]
+            public static object _Deserializer(System.Type expected, global::Orleans.Serialization.BinaryTokenStreamReader stream)
             {
-                return PubSubGrainReference.Cast(((Orleans.GrainReference)(GrainReference.DeserializeGrainReference(expected, stream))));
+                return PubSubGrainReference.Cast(((global::Orleans.Runtime.GrainReference)(global::Orleans.Runtime.GrainReference.DeserializeGrainReference(expected, stream))));
             }
             
-            public System.Threading.Tasks.Task Publish(Microsoft.AspNet.SignalR.Messaging.Message[] messages)
+            public override bool IsCompatible(int interfaceId)
             {
-
-                return base.InvokeMethodAsync<object>(1418215476, new object[] {messages}, TimeSpan.Zero );
+                return (interfaceId == this.InterfaceId);
             }
             
-            public System.Threading.Tasks.Task Subscribe(OrleansR.GrainInterfaces.IMessageObserver observer)
+            protected override string GetMethodName(int interfaceId, int methodId)
             {
-GrainFactoryBase.CheckGrainObserverParamInternal(observer);
-
-                return base.InvokeMethodAsync<object>(-1032958586, new object[] {observer is GrainBase ? OrleansR.GrainInterfaces.MessageObserverFactory.Cast(observer.AsReference()) : observer}, TimeSpan.Zero );
+                return PubSubGrainMethodInvoker.GetMethodName(interfaceId, methodId);
             }
             
-            public System.Threading.Tasks.Task Unsubscribe(OrleansR.GrainInterfaces.IMessageObserver observer)
-            {
-GrainFactoryBase.CheckGrainObserverParamInternal(observer);
-
-                return base.InvokeMethodAsync<object>(-1026708032, new object[] {observer is GrainBase ? OrleansR.GrainInterfaces.MessageObserverFactory.Cast(observer.AsReference()) : observer}, TimeSpan.Zero );
-            }
-            
-            public System.Threading.Tasks.Task Notify(Microsoft.AspNet.SignalR.Messaging.Message[] messages)
+            System.Threading.Tasks.Task OrleansR.GrainInterfaces.IPubSubGrain.Publish(Microsoft.AspNet.SignalR.Messaging.Message[] messages)
             {
 
-                return base.InvokeMethodAsync<object>(1140013191, new object[] {messages}, TimeSpan.Zero );
+                return base.InvokeMethodAsync<object>(1418215476, new object[] {messages} );
             }
             
-            public System.Threading.Tasks.Task TopologyChange(OrleansR.GrainInterfaces.IPubSubGrain[] otherGrains)
+            System.Threading.Tasks.Task OrleansR.GrainInterfaces.IPubSubGrain.Subscribe(OrleansR.GrainInterfaces.IMessageObserver observer)
+            {
+global::Orleans.CodeGeneration.GrainFactoryBase.CheckGrainObserverParamInternal(observer);
+
+                return base.InvokeMethodAsync<object>(-1032958586, new object[] {observer is global::Orleans.Grain ? OrleansR.GrainInterfaces.MessageObserverFactory.Cast(observer.AsReference()) : observer} );
+            }
+            
+            System.Threading.Tasks.Task OrleansR.GrainInterfaces.IPubSubGrain.Unsubscribe(OrleansR.GrainInterfaces.IMessageObserver observer)
+            {
+global::Orleans.CodeGeneration.GrainFactoryBase.CheckGrainObserverParamInternal(observer);
+
+                return base.InvokeMethodAsync<object>(-1026708032, new object[] {observer is global::Orleans.Grain ? OrleansR.GrainInterfaces.MessageObserverFactory.Cast(observer.AsReference()) : observer} );
+            }
+            
+            System.Threading.Tasks.Task OrleansR.GrainInterfaces.IPubSubGrain.Notify(Microsoft.AspNet.SignalR.Messaging.Message[] messages)
             {
 
-                return base.InvokeMethodAsync<object>(-316297706, new object[] {otherGrains}, TimeSpan.Zero );
+                return base.InvokeMethodAsync<object>(1140013191, new object[] {messages} );
+            }
+            
+            System.Threading.Tasks.Task OrleansR.GrainInterfaces.IPubSubGrain.TopologyChange(OrleansR.GrainInterfaces.IPubSubGrain[] otherGrains)
+            {
+
+                return base.InvokeMethodAsync<object>(-316297706, new object[] {otherGrains} );
             }
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.814.60418")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.970.29197")]
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
-    [Orleans.MethodInvokerAttribute("OrleansR.GrainInterfaces.IPubSubGrain", 403532564)]
-    internal class PubSubGrainMethodInvoker : IGrainMethodInvoker
+    [global::Orleans.CodeGeneration.MethodInvokerAttribute("OrleansR.GrainInterfaces.OrleansR.GrainInterfaces.IPubSubGrain", 403532564)]
+    internal class PubSubGrainMethodInvoker : global::Orleans.CodeGeneration.IGrainMethodInvoker
     {
         
-        public int InterfaceId
+        int global::Orleans.CodeGeneration.IGrainMethodInvoker.InterfaceId
         {
             get
             {
@@ -154,35 +177,39 @@ GrainFactoryBase.CheckGrainObserverParamInternal(observer);
             }
         }
         
-        public async System.Threading.Tasks.Task<Object> Invoke(IAddressable grain, int interfaceId, int methodId, object[] arguments)
+        global::System.Threading.Tasks.Task<object> global::Orleans.CodeGeneration.IGrainMethodInvoker.Invoke(global::Orleans.Runtime.IAddressable grain, int interfaceId, int methodId, object[] arguments)
         {
-                if (grain == null) throw new System.ArgumentNullException("grain");
+
+            try
+            {{                    if (grain == null) throw new System.ArgumentNullException("grain");
                 switch (interfaceId)
                 {
                     case 403532564:  // IPubSubGrain
                         switch (methodId)
                         {
                             case 1418215476: 
-                                await ((IPubSubGrain)grain).Publish((Microsoft.AspNet.SignalR.Messaging.Message[])arguments[0]);
-                              return true;
+                                return ((IPubSubGrain)grain).Publish((Microsoft.AspNet.SignalR.Messaging.Message[])arguments[0]).ContinueWith(t => {if (t.Status == System.Threading.Tasks.TaskStatus.Faulted) throw t.Exception; return (object)null; });
                             case -1032958586: 
-                                await ((IPubSubGrain)grain).Subscribe((IMessageObserver)arguments[0]);
-                              return true;
+                                return ((IPubSubGrain)grain).Subscribe((IMessageObserver)arguments[0]).ContinueWith(t => {if (t.Status == System.Threading.Tasks.TaskStatus.Faulted) throw t.Exception; return (object)null; });
                             case -1026708032: 
-                                await ((IPubSubGrain)grain).Unsubscribe((IMessageObserver)arguments[0]);
-                              return true;
+                                return ((IPubSubGrain)grain).Unsubscribe((IMessageObserver)arguments[0]).ContinueWith(t => {if (t.Status == System.Threading.Tasks.TaskStatus.Faulted) throw t.Exception; return (object)null; });
                             case 1140013191: 
-                                await ((IPubSubGrain)grain).Notify((Microsoft.AspNet.SignalR.Messaging.Message[])arguments[0]);
-                              return true;
+                                return ((IPubSubGrain)grain).Notify((Microsoft.AspNet.SignalR.Messaging.Message[])arguments[0]).ContinueWith(t => {if (t.Status == System.Threading.Tasks.TaskStatus.Faulted) throw t.Exception; return (object)null; });
                             case -316297706: 
-                                await ((IPubSubGrain)grain).TopologyChange((IPubSubGrain[])arguments[0]);
-                              return true;
+                                return ((IPubSubGrain)grain).TopologyChange((IPubSubGrain[])arguments[0]).ContinueWith(t => {if (t.Status == System.Threading.Tasks.TaskStatus.Faulted) throw t.Exception; return (object)null; });
                             default: 
-                                throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
+                            throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
                         }
                     default:
                         throw new System.InvalidCastException("interfaceId="+interfaceId);
                 }
+            }}
+            catch(Exception ex)
+            {{
+                var t = new System.Threading.Tasks.TaskCompletionSource<object>();
+                t.SetException(ex);
+                return t.Task;
+            }}
         }
         
         public static string GetMethodName(int interfaceId, int methodId)
@@ -204,8 +231,6 @@ GrainFactoryBase.CheckGrainObserverParamInternal(observer);
                             return "Notify";
                     case -316297706:
                             return "TopologyChange";
-                    case -606142484:
-                            return "GetProperties";
                     
                         default: 
                             throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
@@ -217,120 +242,129 @@ GrainFactoryBase.CheckGrainObserverParamInternal(observer);
         }
     }
     
-    [Serializable()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.814.60418")]
-    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
-    public class PubSubGrainProperties
-    {
-        
-
-            public Dictionary<string,object> AsDictionary()
-            {  
-                var retValue = new Dictionary<string,object>();
-                return retValue;
-            }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.814.60418")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.970.29197")]
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
     public class PubSubManagerFactory
     {
         
 
-                        public static IPubSubManager GetGrain(long primaryKey)
+                        public static OrleansR.GrainInterfaces.IPubSubManager GetGrain(long primaryKey)
                         {
-                            return Cast(GrainFactoryBase.MakeGrainReferenceInternal(typeof(IPubSubManager), 1150057381, primaryKey));
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(OrleansR.GrainInterfaces.IPubSubManager), 1150057381, primaryKey));
                         }
 
-                        public static IPubSubManager GetGrain(long primaryKey, string grainClassNamePrefix)
+                        public static OrleansR.GrainInterfaces.IPubSubManager GetGrain(long primaryKey, string grainClassNamePrefix)
                         {
-                            return Cast(GrainFactoryBase.MakeGrainReferenceInternal(typeof(IPubSubManager), 1150057381, primaryKey, grainClassNamePrefix));
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(OrleansR.GrainInterfaces.IPubSubManager), 1150057381, primaryKey, grainClassNamePrefix));
                         }
 
-                        public static IPubSubManager GetGrain(Guid primaryKey)
+                        public static OrleansR.GrainInterfaces.IPubSubManager GetGrain(System.Guid primaryKey)
                         {
-                            return Cast(GrainFactoryBase.MakeGrainReferenceInternal(typeof(IPubSubManager), 1150057381, primaryKey));
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(OrleansR.GrainInterfaces.IPubSubManager), 1150057381, primaryKey));
                         }
 
-                        public static IPubSubManager GetGrain(Guid primaryKey, string grainClassNamePrefix)
+                        public static OrleansR.GrainInterfaces.IPubSubManager GetGrain(System.Guid primaryKey, string grainClassNamePrefix)
                         {
-                            return Cast(GrainFactoryBase.MakeGrainReferenceInternal(typeof(IPubSubManager), 1150057381, primaryKey, grainClassNamePrefix));
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(OrleansR.GrainInterfaces.IPubSubManager), 1150057381, primaryKey, grainClassNamePrefix));
                         }
 
-            public static IPubSubManager Cast(IAddressable grainRef)
+            public static OrleansR.GrainInterfaces.IPubSubManager Cast(global::Orleans.Runtime.IAddressable grainRef)
             {
                 
                 return PubSubManagerReference.Cast(grainRef);
             }
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.814.60418")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.970.29197")]
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
         [System.SerializableAttribute()]
-        [Orleans.GrainReferenceAttribute("OrleansR.GrainInterfaces.IPubSubManager")]
-        internal class PubSubManagerReference : Orleans.GrainReference, IPubSubManager, Orleans.IAddressable
+        [global::Orleans.CodeGeneration.GrainReferenceAttribute("OrleansR.GrainInterfaces.OrleansR.GrainInterfaces.IPubSubManager")]
+        internal class PubSubManagerReference : global::Orleans.Runtime.GrainReference, global::Orleans.Runtime.IAddressable, OrleansR.GrainInterfaces.IPubSubManager
         {
             
 
-            public static IPubSubManager Cast(IAddressable grainRef)
+            public static OrleansR.GrainInterfaces.IPubSubManager Cast(global::Orleans.Runtime.IAddressable grainRef)
             {
                 
-                return (IPubSubManager) GrainReference.CastInternal(typeof(IPubSubManager), (GrainReference gr) => { return new PubSubManagerReference(gr);}, grainRef, 1150057381);
+                return (OrleansR.GrainInterfaces.IPubSubManager) global::Orleans.Runtime.GrainReference.CastInternal(typeof(OrleansR.GrainInterfaces.IPubSubManager), (global::Orleans.Runtime.GrainReference gr) => { return new PubSubManagerReference(gr);}, grainRef, 1150057381);
             }
-
-                protected override int InterfaceId { get { return 1150057381; } }
-
-                public override bool IsCompatible(int interfaceId) { return interfaceId == this.InterfaceId; }
-
-                protected override string InterfaceName { get { return "OrleansR.GrainInterfaces.IPubSubManager"; } }
-
-                protected override string GetMethodName(int interfaceId, int methodId) { return PubSubManagerMethodInvoker.GetMethodName(interfaceId, methodId); }
             
-            protected internal PubSubManagerReference(GrainReference reference) : 
+            protected internal PubSubManagerReference(global::Orleans.Runtime.GrainReference reference) : 
                     base(reference)
             {
             }
             
-            [Orleans.CopierMethodAttribute()]
+            protected internal PubSubManagerReference(SerializationInfo info, StreamingContext context) : 
+                    base(info, context)
+            {
+            }
+            
+            protected override int InterfaceId
+            {
+                get
+                {
+                    return 1150057381;
+                }
+            }
+            
+            protected override string InterfaceName
+            {
+                get
+                {
+                    return "OrleansR.GrainInterfaces.OrleansR.GrainInterfaces.IPubSubManager";
+                }
+            }
+            
+            [global::Orleans.CodeGeneration.CopierMethodAttribute()]
             public static object _Copier(object original)
             {
                 PubSubManagerReference input = ((PubSubManagerReference)(original));
-                return ((PubSubManagerReference)(GrainReference.CopyGrainReference(input)));
+                return ((PubSubManagerReference)(global::Orleans.Runtime.GrainReference.CopyGrainReference(input)));
             }
             
-            [Orleans.SerializerMethodAttribute()]
-            public static void _Serializer(object original, Orleans.Serialization.BinaryTokenStreamWriter stream, System.Type expected)
+            [global::Orleans.CodeGeneration.SerializerMethodAttribute()]
+            public static void _Serializer(object original, global::Orleans.Serialization.BinaryTokenStreamWriter stream, System.Type expected)
             {
                 PubSubManagerReference input = ((PubSubManagerReference)(original));
-                GrainReference.SerializeGrainReference(input, stream, expected);
+                global::Orleans.Runtime.GrainReference.SerializeGrainReference(input, stream, expected);
             }
             
-            [Orleans.DeserializerMethodAttribute()]
-            public static object _Deserializer(System.Type expected, Orleans.Serialization.BinaryTokenStreamReader stream)
+            [global::Orleans.CodeGeneration.DeserializerMethodAttribute()]
+            public static object _Deserializer(System.Type expected, global::Orleans.Serialization.BinaryTokenStreamReader stream)
             {
-                return PubSubManagerReference.Cast(((Orleans.GrainReference)(GrainReference.DeserializeGrainReference(expected, stream))));
+                return PubSubManagerReference.Cast(((global::Orleans.Runtime.GrainReference)(global::Orleans.Runtime.GrainReference.DeserializeGrainReference(expected, stream))));
             }
             
-            public System.Threading.Tasks.Task<OrleansR.GrainInterfaces.IPubSubGrain[]> Register(OrleansR.GrainInterfaces.IPubSubGrain grainSubscriber)
+            public override bool IsCompatible(int interfaceId)
+            {
+                return (interfaceId == this.InterfaceId);
+            }
+            
+            protected override string GetMethodName(int interfaceId, int methodId)
+            {
+                return PubSubManagerMethodInvoker.GetMethodName(interfaceId, methodId);
+            }
+            
+            System.Threading.Tasks.Task<OrleansR.GrainInterfaces.IPubSubGrain[]> OrleansR.GrainInterfaces.IPubSubManager.Register(OrleansR.GrainInterfaces.IPubSubGrain grainSubscriber)
             {
 
-                return base.InvokeMethodAsync<OrleansR.GrainInterfaces.IPubSubGrain[]>(-203526534, new object[] {grainSubscriber is GrainBase ? OrleansR.GrainInterfaces.PubSubGrainFactory.Cast(grainSubscriber.AsReference()) : grainSubscriber}, TimeSpan.Zero );
+                return base.InvokeMethodAsync<OrleansR.GrainInterfaces.IPubSubGrain[]>(-203526534, new object[] {grainSubscriber is global::Orleans.Grain ? OrleansR.GrainInterfaces.PubSubGrainFactory.Cast(grainSubscriber.AsReference()) : grainSubscriber} );
             }
             
-            public System.Threading.Tasks.Task Unregister(OrleansR.GrainInterfaces.IPubSubGrain grainSubscriber)
+            System.Threading.Tasks.Task OrleansR.GrainInterfaces.IPubSubManager.Unregister(OrleansR.GrainInterfaces.IPubSubGrain grainSubscriber)
             {
 
-                return base.InvokeMethodAsync<object>(-2125469177, new object[] {grainSubscriber is GrainBase ? OrleansR.GrainInterfaces.PubSubGrainFactory.Cast(grainSubscriber.AsReference()) : grainSubscriber}, TimeSpan.Zero );
+                return base.InvokeMethodAsync<object>(-2125469177, new object[] {grainSubscriber is global::Orleans.Grain ? OrleansR.GrainInterfaces.PubSubGrainFactory.Cast(grainSubscriber.AsReference()) : grainSubscriber} );
             }
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.814.60418")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.970.29197")]
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
-    [Orleans.MethodInvokerAttribute("OrleansR.GrainInterfaces.IPubSubManager", 1150057381)]
-    internal class PubSubManagerMethodInvoker : IGrainMethodInvoker
+    [global::Orleans.CodeGeneration.MethodInvokerAttribute("OrleansR.GrainInterfaces.OrleansR.GrainInterfaces.IPubSubManager", 1150057381)]
+    internal class PubSubManagerMethodInvoker : global::Orleans.CodeGeneration.IGrainMethodInvoker
     {
         
-        public int InterfaceId
+        int global::Orleans.CodeGeneration.IGrainMethodInvoker.InterfaceId
         {
             get
             {
@@ -338,25 +372,33 @@ GrainFactoryBase.CheckGrainObserverParamInternal(observer);
             }
         }
         
-        public async System.Threading.Tasks.Task<Object> Invoke(IAddressable grain, int interfaceId, int methodId, object[] arguments)
+        global::System.Threading.Tasks.Task<object> global::Orleans.CodeGeneration.IGrainMethodInvoker.Invoke(global::Orleans.Runtime.IAddressable grain, int interfaceId, int methodId, object[] arguments)
         {
-                if (grain == null) throw new System.ArgumentNullException("grain");
+
+            try
+            {{                    if (grain == null) throw new System.ArgumentNullException("grain");
                 switch (interfaceId)
                 {
                     case 1150057381:  // IPubSubManager
                         switch (methodId)
                         {
                             case -203526534: 
-                                return await ((IPubSubManager)grain).Register((IPubSubGrain)arguments[0]);
+                                return ((IPubSubManager)grain).Register((IPubSubGrain)arguments[0]).ContinueWith(t => {if (t.Status == System.Threading.Tasks.TaskStatus.Faulted) throw t.Exception; return (object)t.Result; });
                             case -2125469177: 
-                                await ((IPubSubManager)grain).Unregister((IPubSubGrain)arguments[0]);
-                              return true;
+                                return ((IPubSubManager)grain).Unregister((IPubSubGrain)arguments[0]).ContinueWith(t => {if (t.Status == System.Threading.Tasks.TaskStatus.Faulted) throw t.Exception; return (object)null; });
                             default: 
-                                throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
+                            throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
                         }
                     default:
                         throw new System.InvalidCastException("interfaceId="+interfaceId);
                 }
+            }}
+            catch(Exception ex)
+            {{
+                var t = new System.Threading.Tasks.TaskCompletionSource<object>();
+                t.SetException(ex);
+                return t.Task;
+            }}
         }
         
         public static string GetMethodName(int interfaceId, int methodId)
@@ -372,8 +414,6 @@ GrainFactoryBase.CheckGrainObserverParamInternal(observer);
                             return "Register";
                     case -2125469177:
                             return "Unregister";
-                    case -606142484:
-                            return "GetProperties";
                     
                         default: 
                             throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
@@ -385,93 +425,102 @@ GrainFactoryBase.CheckGrainObserverParamInternal(observer);
         }
     }
     
-    [Serializable()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.814.60418")]
-    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
-    public class PubSubManagerProperties
-    {
-        
-
-            public Dictionary<string,object> AsDictionary()
-            {  
-                var retValue = new Dictionary<string,object>();
-                return retValue;
-            }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.814.60418")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.970.29197")]
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
     public class MessageObserverFactory
     {
         
 
-            public static IMessageObserver Cast(IAddressable grainRef)
+            public static OrleansR.GrainInterfaces.IMessageObserver Cast(global::Orleans.Runtime.IAddressable grainRef)
             {
                 
                 return MessageObserverReference.Cast(grainRef);
             }
 
-        private static IGrainMethodInvoker methodInvoker;
+        private static global::Orleans.CodeGeneration.IGrainMethodInvoker methodInvoker;
 
-        public async static System.Threading.Tasks.Task<IMessageObserver> CreateObjectReference(IMessageObserver obj)
+        public async static System.Threading.Tasks.Task<OrleansR.GrainInterfaces.IMessageObserver> CreateObjectReference(OrleansR.GrainInterfaces.IMessageObserver obj)
         {
             if (methodInvoker == null) methodInvoker = new MessageObserverMethodInvoker();
-            return MessageObserverFactory.Cast(await GrainReference.CreateObjectReference(obj, methodInvoker));
+            return MessageObserverFactory.Cast(await global::Orleans.Runtime.GrainReference.CreateObjectReference(obj, methodInvoker));
         }
 
-        public static void DeleteObjectReference(IMessageObserver reference)
+        public static System.Threading.Tasks.Task DeleteObjectReference(OrleansR.GrainInterfaces.IMessageObserver reference)
         {
-            GrainReference.DeleteObjectReference(reference);
+            return global::Orleans.Runtime.GrainReference.DeleteObjectReference(reference);
         }
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.814.60418")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.970.29197")]
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
         [System.SerializableAttribute()]
-        [Orleans.GrainReferenceAttribute("OrleansR.GrainInterfaces.IMessageObserver")]
-        internal class MessageObserverReference : Orleans.GrainReference, IMessageObserver, Orleans.IAddressable
+        [global::Orleans.CodeGeneration.GrainReferenceAttribute("OrleansR.GrainInterfaces.OrleansR.GrainInterfaces.IMessageObserver")]
+        internal class MessageObserverReference : global::Orleans.Runtime.GrainReference, global::Orleans.Runtime.IAddressable, OrleansR.GrainInterfaces.IMessageObserver
         {
             
 
-            public static IMessageObserver Cast(IAddressable grainRef)
+            public static OrleansR.GrainInterfaces.IMessageObserver Cast(global::Orleans.Runtime.IAddressable grainRef)
             {
                 
-                return (IMessageObserver) GrainReference.CastInternal(typeof(IMessageObserver), (GrainReference gr) => { return new MessageObserverReference(gr);}, grainRef, 1167282281);
+                return (OrleansR.GrainInterfaces.IMessageObserver) global::Orleans.Runtime.GrainReference.CastInternal(typeof(OrleansR.GrainInterfaces.IMessageObserver), (global::Orleans.Runtime.GrainReference gr) => { return new MessageObserverReference(gr);}, grainRef, 1167282281);
             }
-
-                protected override int InterfaceId { get { return 1167282281; } }
-
-                public override bool IsCompatible(int interfaceId) { return interfaceId == this.InterfaceId; }
-
-                protected override string InterfaceName { get { return "OrleansR.GrainInterfaces.IMessageObserver"; } }
-
-                protected override string GetMethodName(int interfaceId, int methodId) { return MessageObserverMethodInvoker.GetMethodName(interfaceId, methodId); }
             
-            protected internal MessageObserverReference(GrainReference reference) : 
+            protected internal MessageObserverReference(global::Orleans.Runtime.GrainReference reference) : 
                     base(reference)
             {
             }
             
-            [Orleans.CopierMethodAttribute()]
+            protected internal MessageObserverReference(SerializationInfo info, StreamingContext context) : 
+                    base(info, context)
+            {
+            }
+            
+            protected override int InterfaceId
+            {
+                get
+                {
+                    return 1167282281;
+                }
+            }
+            
+            protected override string InterfaceName
+            {
+                get
+                {
+                    return "OrleansR.GrainInterfaces.OrleansR.GrainInterfaces.IMessageObserver";
+                }
+            }
+            
+            [global::Orleans.CodeGeneration.CopierMethodAttribute()]
             public static object _Copier(object original)
             {
                 MessageObserverReference input = ((MessageObserverReference)(original));
-                return ((MessageObserverReference)(GrainReference.CopyGrainReference(input)));
+                return ((MessageObserverReference)(global::Orleans.Runtime.GrainReference.CopyGrainReference(input)));
             }
             
-            [Orleans.SerializerMethodAttribute()]
-            public static void _Serializer(object original, Orleans.Serialization.BinaryTokenStreamWriter stream, System.Type expected)
+            [global::Orleans.CodeGeneration.SerializerMethodAttribute()]
+            public static void _Serializer(object original, global::Orleans.Serialization.BinaryTokenStreamWriter stream, System.Type expected)
             {
                 MessageObserverReference input = ((MessageObserverReference)(original));
-                GrainReference.SerializeGrainReference(input, stream, expected);
+                global::Orleans.Runtime.GrainReference.SerializeGrainReference(input, stream, expected);
             }
             
-            [Orleans.DeserializerMethodAttribute()]
-            public static object _Deserializer(System.Type expected, Orleans.Serialization.BinaryTokenStreamReader stream)
+            [global::Orleans.CodeGeneration.DeserializerMethodAttribute()]
+            public static object _Deserializer(System.Type expected, global::Orleans.Serialization.BinaryTokenStreamReader stream)
             {
-                return MessageObserverReference.Cast(((Orleans.GrainReference)(GrainReference.DeserializeGrainReference(expected, stream))));
+                return MessageObserverReference.Cast(((global::Orleans.Runtime.GrainReference)(global::Orleans.Runtime.GrainReference.DeserializeGrainReference(expected, stream))));
             }
             
-            public void Send(Microsoft.AspNet.SignalR.Messaging.Message[] message)
+            public override bool IsCompatible(int interfaceId)
+            {
+                return (interfaceId == this.InterfaceId);
+            }
+            
+            protected override string GetMethodName(int interfaceId, int methodId)
+            {
+                return MessageObserverMethodInvoker.GetMethodName(interfaceId, methodId);
+            }
+            
+            void OrleansR.GrainInterfaces.IMessageObserver.Send(Microsoft.AspNet.SignalR.Messaging.Message[] message)
             {
 
                 base.InvokeOneWayMethod(-679320403, new object[] {message} );
@@ -479,13 +528,13 @@ GrainFactoryBase.CheckGrainObserverParamInternal(observer);
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.814.60418")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.970.29197")]
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
-    [Orleans.MethodInvokerAttribute("OrleansR.GrainInterfaces.IMessageObserver", 1167282281)]
-    internal class MessageObserverMethodInvoker : IGrainMethodInvoker
+    [global::Orleans.CodeGeneration.MethodInvokerAttribute("OrleansR.GrainInterfaces.OrleansR.GrainInterfaces.IMessageObserver", 1167282281)]
+    internal class MessageObserverMethodInvoker : global::Orleans.CodeGeneration.IGrainMethodInvoker
     {
         
-        public int InterfaceId
+        int global::Orleans.CodeGeneration.IGrainMethodInvoker.InterfaceId
         {
             get
             {
@@ -493,22 +542,31 @@ GrainFactoryBase.CheckGrainObserverParamInternal(observer);
             }
         }
         
-        public async System.Threading.Tasks.Task<Object> Invoke(IAddressable grain, int interfaceId, int methodId, object[] arguments)
+        global::System.Threading.Tasks.Task<object> global::Orleans.CodeGeneration.IGrainMethodInvoker.Invoke(global::Orleans.Runtime.IAddressable grain, int interfaceId, int methodId, object[] arguments)
         {
-                if (grain == null) throw new System.ArgumentNullException("grain");
+
+            try
+            {{                    if (grain == null) throw new System.ArgumentNullException("grain");
                 switch (interfaceId)
                 {
                     case 1167282281:  // IMessageObserver
                         switch (methodId)
                         {
                             case -679320403: 
-                                ((IMessageObserver)grain).Send((Microsoft.AspNet.SignalR.Messaging.Message[])arguments[0]); return true;
+                                ((IMessageObserver)grain).Send((Microsoft.AspNet.SignalR.Messaging.Message[])arguments[0]); return System.Threading.Tasks.Task.FromResult((object)true);
                             default: 
-                                throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
+                            throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
                         }
                     default:
                         throw new System.InvalidCastException("interfaceId="+interfaceId);
                 }
+            }}
+            catch(Exception ex)
+            {{
+                var t = new System.Threading.Tasks.TaskCompletionSource<object>();
+                t.SetException(ex);
+                return t.Task;
+            }}
         }
         
         public static string GetMethodName(int interfaceId, int methodId)
@@ -522,8 +580,6 @@ GrainFactoryBase.CheckGrainObserverParamInternal(observer);
                     {
                         case -679320403:
                             return "Send";
-                    case -606142484:
-                            return "GetProperties";
                     
                         default: 
                             throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
@@ -534,31 +590,7 @@ GrainFactoryBase.CheckGrainObserverParamInternal(observer);
             }
         }
     }
-    
-    [Serializable()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.814.60418")]
-    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
-    public class MessageObserverProperties
-    {
-        
-
-            public Dictionary<string,object> AsDictionary()
-            {  
-                var retValue = new Dictionary<string,object>();
-                return retValue;
-            }
-    }
 }
-//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//     Runtime Version:4.0.30319.34014
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
 namespace OrleansR.GrainInterfacesSerializers
 {
     using System;
@@ -572,7 +604,9 @@ namespace OrleansR.GrainInterfacesSerializers
     using System.Runtime.InteropServices;
     
     
-    [Orleans.RegisterSerializerAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.970.29197")]
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
+    [global::Orleans.CodeGeneration.RegisterSerializerAttribute()]
     internal class Microsoft_AspNet_SignalR_Messaging_MessageSerialization
     {
         
@@ -642,7 +676,7 @@ namespace OrleansR.GrainInterfacesSerializers
             Orleans.Serialization.SerializationManager.SerializeInner(input.WaitForAck, stream, typeof(Boolean));
         }
         
-        public static object Deserializer(System.Type expected, Orleans.Serialization.BinaryTokenStreamReader stream)
+        public static object Deserializer(System.Type expected, global::Orleans.Serialization.BinaryTokenStreamReader stream)
         {
             Microsoft.AspNet.SignalR.Messaging.Message result = new Microsoft.AspNet.SignalR.Messaging.Message();
             result.CommandId = ((String)(Orleans.Serialization.SerializationManager.DeserializeInner(typeof(String), stream)));
@@ -670,7 +704,7 @@ namespace OrleansR.GrainInterfacesSerializers
         
         public static void Register()
         {
-            Orleans.Serialization.SerializationManager.Register(typeof(Microsoft.AspNet.SignalR.Messaging.Message), DeepCopier, Serializer, Deserializer);
+            global::Orleans.Serialization.SerializationManager.Register(typeof(Microsoft.AspNet.SignalR.Messaging.Message), DeepCopier, Serializer, Deserializer);
             fieldInfo2 = typeof(Microsoft.AspNet.SignalR.Messaging.Message).GetField("<Encoding>k__BackingField", (System.Reflection.BindingFlags.Instance 
                             | (System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic)));
             fieldInfo3 = typeof(Microsoft.AspNet.SignalR.Messaging.Message).GetField("<Filter>k__BackingField", (System.Reflection.BindingFlags.Instance 

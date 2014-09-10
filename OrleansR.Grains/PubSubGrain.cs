@@ -2,11 +2,12 @@
 using OrleansR.GrainInterfaces;
 using System.Linq;
 using System.Threading.Tasks;
+using Orleans.Concurrency;
 
 namespace OrleansR.Grains
 {
     [Reentrant]
-    public class PubSubGrain : Orleans.GrainBase, IPubSubGrain
+    public class PubSubGrain : Orleans.Grain, IPubSubGrain
     {
         ObserverSubscriptionManager<IMessageObserver> observers;
         IPubSubGrain[] otherGrains;
